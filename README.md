@@ -1,14 +1,14 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+It allows you to make a todo list.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+This todo app allows you to set reminders and check them off when they are done.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+This app uses HTML, Javascript, and CSS to make many different things including. Buttons that are responsive and have purpose. Deletion of a form. creation of a form.
 
 ## Deployment
 
