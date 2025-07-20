@@ -19,7 +19,7 @@ class FormValidator {
     const errorElement = this._formEl.querySelector(
       `#${inputElement.id}-error`
     );
-    inputElement.classList.add(this._inputErrorClass);
+    inputElement.setAttribute('aria-invalid', 'true');
     errorElement.textContent = errorMessage;
     errorElement.classList.add(this._errorClass);
   }

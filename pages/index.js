@@ -32,11 +32,16 @@ const addTodoPopup = new PopupWithForm({
     const name = inputValues.name;
     const dateInput = inputValues.date;
 
-    const date = new Date(dateInput);
+    let date = null;
+    if (dateInput) {
+      date = new Date(dateInput);
+      date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+    }
+
     date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
     const id = uuidv4();
-    const newTodo = { name, date, id };
+    const newTodo = { name, id, ...(date && { date }) };
     const todoElement = generateTodo(newTodo);
     section.addItem(todoElement);
     todoCounter.updateTotal(true);
@@ -66,6 +71,7 @@ section.renderItems();
 
 addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
+  newTodoValidator.resetValidation();
 });
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
