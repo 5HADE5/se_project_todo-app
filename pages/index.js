@@ -38,7 +38,7 @@ const addTodoPopup = new PopupWithForm({
       date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
     }
 
-    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+  
 
     const id = uuidv4();
     const newTodo = { name, id, ...(date && { date }) };
