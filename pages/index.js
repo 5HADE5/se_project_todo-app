@@ -36,10 +36,9 @@ const addTodoPopup = new PopupWithForm({
     const dateInput = inputValues.date;
 
     const date = null;
-    if (dateInput) {
-      date = new Date(dateInput);
-      date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
-    }
+    const date = new Date(dateInput);
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+
 
   
 
